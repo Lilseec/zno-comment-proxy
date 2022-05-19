@@ -5,7 +5,7 @@ var port = process.env.PORT || 8080;
 
 var cors_proxy = require('cors-anywhere');
 cors_proxy.createServer({
-    originWhitelist: ["https://lilseec.github.io/zno-comment", "http://lilseec.github.io/zno-comment"],
+    originWhitelist: ["https://lilseec.github.io", "http://lilseec.github.io"],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, function() {
